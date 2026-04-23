@@ -1,51 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IVy TechOps — Local PC Repair & Tech Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href="/style.css">
-        <title>Iskandar Verdiyev - Portfolio</title>
-    </head>
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="logo">I<em>V</em>y TechOps</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn">Book a Visit</a>
+</nav>
 
-    <body>
+<!-- HERO -->
+<div id="hero">
+  <div>
+    <div class="hero-eyebrow">Miami-Based PC Support</div>
+    <h1>Your computer,<br><em>fixed fast.</em></h1>
+    <p class="hero-body">Friendly, jargon-free tech support for individuals and small businesses in the Miami area. We come to you — or fix it remotely.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-blue">Book a Free Diagnosis</a>
+      <a href="#services" class="btn-ghost">See What We Fix</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-avatars">
+        <span>MR</span><span>JD</span><span>SK</span><span>AL</span>
+      </div>
+      <div class="trust-text">
+        <div class="stars">★★★★★</div>
+        <div><strong>80+ happy customers</strong> in Miami</div>
+      </div>
+    </div>
+  </div>
 
-        <header>
-            <h1>Iskandar Verdiyev</h1>
-            <p>IT Specialist</p>
-        </header>
+  <div class="hero-visual">
+    <div style="position:relative;">
+      <div class="pc-card">
+        <div class="pc-card-header">
+          <span class="pc-card-title">System Diagnosis</span>
+          <span class="badge-live">Live Check</span>
+        </div>
+        <div class="diag-item"><span class="diag-icon">💾</span><span class="diag-label">Hard Drive Health</span><span class="diag-status status-ok">Good</span></div>
+        <div class="diag-item"><span class="diag-icon">🦠</span><span class="diag-label">Malware &amp; Viruses</span><span class="diag-status status-fix">3 Found</span></div>
+        <div class="diag-item"><span class="diag-icon">🚀</span><span class="diag-label">Startup Programs</span><span class="diag-status status-warn">Slow</span></div>
+        <div class="diag-item"><span class="diag-icon">🔄</span><span class="diag-label">Windows Updates</span><span class="diag-status status-fix">12 Pending</span></div>
+        <div class="diag-item"><span class="diag-icon">🌡️</span><span class="diag-label">CPU Temperature</span><span class="diag-status status-ok">Normal</span></div>
+        <div class="diag-bar-wrap">
+          <div class="diag-bar-label"><span>RAM Usage</span><span>71%</span></div>
+          <div class="diag-bar-track"><div class="diag-bar-fill" style="width:71%;background:#f59e0b;"></div></div>
+        </div>
+        <div class="diag-bar-wrap" style="margin-top:0.65rem;">
+          <div class="diag-bar-label"><span>Storage Free</span><span>34%</span></div>
+          <div class="diag-bar-track"><div class="diag-bar-fill" style="width:34%;background:#ef4444;"></div></div>
+        </div>
+      </div>
+      <div class="floating-badge fb-top"><span>⚡</span><span>Same-day service available</span></div>
+      <div class="floating-badge fb-bot"><span>🔒</span><span>No fix, no fee guarantee</span></div>
+    </div>
+  </div>
+</div>
 
-        <section>
-            <h2>WEBSITE UNDER DEVELOPMENT</h2>
-            <p>
-               WEBSITE UNDER DEVELOPMENT
-            </p>
-        </section>
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-wrap">
+    <div class="section-label reveal">What We Fix</div>
+    <h2 class="reveal d1">Everything your PC might<br><em>throw at you</em></h2>
+    <p class="section-sub reveal d2">If it plugs in and causes headaches, we handle it. No job too small.</p>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <span class="svc-emoji">🐢</span>
+        <div class="svc-title">Slow Computer Speedup</div>
+        <p class="svc-desc">Bloatware, startup junk, fragmented drives, outdated drivers — we dig out every culprit and get your PC snappy again.</p>
+        <div class="svc-price">Starting at $49</div>
+      </div>
+      <div class="svc-card reveal d1">
+        <span class="svc-emoji">🦠</span>
+        <div class="svc-title">Virus &amp; Malware Removal</div>
+        <p class="svc-desc">Full system scan, complete threat removal, and a security tune-up so you're protected going forward.</p>
+        <div class="svc-price">Starting at $59</div>
+      </div>
+      <div class="svc-card reveal d2">
+        <span class="svc-emoji">💥</span>
+        <div class="svc-title">Crash &amp; Error Fixes</div>
+        <p class="svc-desc">Blue screens, freezes, mysterious error messages — we find the root cause and fix it properly, not just patch over it.</p>
+        <div class="svc-price">Starting at $59</div>
+      </div>
+      <div class="svc-card reveal d3">
+        <span class="svc-emoji">🔧</span>
+        <div class="svc-title">Hardware Upgrades</div>
+        <p class="svc-desc">More RAM, a new SSD, or a replacement part — we source it, install it, and make sure everything runs smoothly.</p>
+        <div class="svc-price">Starting at $39 + parts</div>
+      </div>
+      <div class="svc-card reveal d1">
+        <span class="svc-emoji">📶</span>
+        <div class="svc-title">Wi-Fi &amp; Network Setup</div>
+        <p class="svc-desc">Weak signal, dropped connections, printer that never cooperates — we sort your home or office network for good.</p>
+        <div class="svc-price">Starting at $49</div>
+      </div>
+      <div class="svc-card reveal d2">
+        <span class="svc-emoji">🏢</span>
+        <div class="svc-title">Small Business Support</div>
+        <p class="svc-desc">Workstation setup, employee onboarding, backups, shared drives — ongoing tech support for teams of 1–20 people.</p>
+        <div class="svc-price">Custom plans available</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section>
-            <h2>My Work</h2>
-            <div class="portfolio-item">
-                <h3>WEBSITE UNDER DEVELOPMENT</h3>
-                <p>WEBSITE UNDER DEVELOPMENT</p>
-            </div>
-            <div class="portfolio-item">
-                <h3>WEBSITE UNDER DEVELOPMENT</h3>
-                <p>WEBSITE UNDER DEVELOPMENT</p>
-            </div>
-        </section>
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-wrap">
+    <div class="section-label reveal">How It Works</div>
+    <h2 class="reveal d1">Simple as <em>1, 2, 3</em></h2>
+    <p class="section-sub reveal d2">No confusing processes. No surprise bills. Just fast, friendly help.</p>
+    <div class="steps">
+      <div class="reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Book online or call</div>
+        <p class="step-desc">Tell us what's going on — takes 2 minutes. We'll confirm a time that works for you, often same-day.</p>
+      </div>
+      <div class="reveal d1">
+        <div class="step-num">02</div>
+        <div class="step-title">We diagnose for free</div>
+        <p class="step-desc">We run a full check and tell you exactly what's wrong and what it'll cost — before we touch anything.</p>
+      </div>
+      <div class="reveal d2">
+        <div class="step-num">03</div>
+        <div class="step-title">Fixed — or you pay nothing</div>
+        <p class="step-desc">We get to work. If we can't fix it, you don't owe us a cent. It's that simple.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <section>
-            <h2>Contact Me</h2>
-            <p>Email: iskandar.verdiyev@gmail.com</p>
-            <p>GitHub: github.com/IskaIV</p>
-        </section>
+<!-- PRICING -->
+<section id="pricing">
+  <div class="section-wrap">
+    <div class="section-label reveal">Pricing</div>
+    <h2 class="reveal d1">Honest prices, <em>no surprises</em></h2>
+    <p class="section-sub reveal d2">One-time fixes or an ongoing plan for your home or business — we've got you covered either way.</p>
+    <div class="pricing-grid">
+      <div class="plan-card reveal">
+        <div class="plan-name">One-Time Fix</div>
+        <div class="plan-desc">For when something breaks</div>
+        <div class="plan-price"><sup>$</sup>49<span style="font-size:1.1rem;font-weight:400;">+</span></div>
+        <div class="plan-cadence">per visit or remote session</div>
+        <ul class="plan-features">
+          <li>Free diagnosis included</li>
+          <li>Remote or in-home service</li>
+          <li>No-fix, no-fee guarantee</li>
+          <li>Same-day availability</li>
+          <li class="off">Priority support</li>
+          <li class="off">Monthly check-ins</li>
+        </ul>
+        <a href="#contact" class="plan-cta">Book a Visit</a>
+      </div>
+      <div class="plan-card featured reveal d1">
+        <div class="plan-popular">Most Popular</div>
+        <div class="plan-name">Small Biz Plan</div>
+        <div class="plan-desc">Ongoing support for your team</div>
+        <div class="plan-price"><sup>$</sup>99</div>
+        <div class="plan-cadence">per month, up to 5 devices</div>
+        <ul class="plan-features">
+          <li>Unlimited remote support</li>
+          <li>Priority response (&lt;2 hrs)</li>
+          <li>Monthly health check</li>
+          <li>Virus &amp; security monitoring</li>
+          <li>Software updates managed</li>
+          <li>Discounted on-site visits</li>
+        </ul>
+        <a href="#contact" class="plan-cta">Get Started</a>
+      </div>
+      <div class="plan-card reveal d2">
+        <div class="plan-name">Home Care Plan</div>
+        <div class="plan-desc">Peace of mind at home</div>
+        <div class="plan-price"><sup>$</sup>29</div>
+        <div class="plan-cadence">per month, 1–2 devices</div>
+        <ul class="plan-features">
+          <li>Unlimited remote support</li>
+          <li>Quarterly tune-up included</li>
+          <li>Virus protection monitoring</li>
+          <li>Priority booking</li>
+          <li class="off">On-site visit discount</li>
+          <li class="off">Multi-device management</li>
+        </ul>
+        <a href="#contact" class="plan-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <footer>
-            &copy; 2025 Iskandar Verdiyev - Personal Website
-        </footer>
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-wrap">
+    <div class="section-label reveal">Customer Reviews</div>
+    <h2 class="reveal d1">People love their <em>faster computers</em></h2>
+    <p class="section-sub reveal d2">Real customers, real results. No tech drama.</p>
+    <div class="reviews-grid">
+      <div class="review-card reveal">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">My laptop was crawling for months. They came over, ran a cleanup, swapped in an SSD, and now it boots in 10 seconds. Incredible difference — and they explained everything in plain English.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#eff4ff;color:#2563eb;">MR</div>
+          <div><div class="reviewer-name">Maria R.</div><div class="reviewer-detail">Homeowner, Coral Gables</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal d1">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">We run a small salon and our booking computer kept freezing. IVy TechOps sorted it remotely in under an hour. Now we're on their monthly plan and haven't had a single issue since.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#fef9ee;color:#d97706;">JD</div>
+          <div><div class="reviewer-name">James D.</div><div class="reviewer-detail">Small Business Owner, South Beach</div></div>
+        </div>
+      </div>
+      <div class="review-card reveal d2">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Got hit with ransomware and completely panicked. They were at my house within two hours, cleaned everything, recovered my files, and set up a proper backup. Genuinely saved my business.</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar" style="background:#f0fdf4;color:#16a34a;">SK</div>
+          <div><div class="reviewer-name">Sandra K.</div><div class="reviewer-detail">Freelance Designer, Brickell</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    </body>
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-wrap">
+    <div class="section-label reveal">FAQ</div>
+    <h2 class="reveal d1">Questions we hear <em>all the time</em></h2>
+    <div class="faq-list reveal d2">
+      <div class="faq-item">
+        <div class="faq-q">Do you come to my home or office? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Yes! We offer both in-home and in-office visits across the Miami area, as well as remote support for most software issues. We'll let you know which option works best when you book.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does "no fix, no fee" actually mean? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">If we can't resolve your issue, you don't pay for the service call. We'll be honest with you about whether we can fix something before we start — so you're never left with a bill and the same problem.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How fast can you get to me? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">We often have same-day availability, especially for remote support. For in-home visits, we can usually schedule within 24 hours. Urgent situation? Call us directly and we'll do our best.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you work on Macs too, or just Windows? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Both! Most of our work is Windows-based, but we're fully comfortable with macOS troubleshooting, optimization, and hardware upgrades as well.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will my data be safe? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">Absolutely. We never access your files beyond what's needed to fix the issue, and we always recommend a backup before any major work. Your privacy matters to us.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you help my small business with multiple computers? <span class="faq-arrow">▾</span></div>
+        <div class="faq-a">That's exactly what our Small Biz Plan is built for. We support teams of up to 20, including workstation setup, network config, shared drives, and ongoing maintenance. Reach out for a custom quote.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- CONTACT -->
+<div id="contact">
+  <div class="contact-info">
+    <div class="section-label reveal">Get in Touch</div>
+    <h2 class="reveal d1">Let's get your PC <em>sorted</em></h2>
+    <p class="reveal d2">Drop us a message and we'll get back to you within a few hours. Or call us — we actually pick up.</p>
+    <div class="contact-detail reveal d2">
+      <span class="contact-detail-icon">📍</span>
+      <div><div class="contact-detail-label">Service Area</div><div class="contact-detail-val">Miami &amp; surrounding areas</div></div>
+    </div>
+    <div class="contact-detail reveal d3">
+      <span class="contact-detail-icon">📞</span>
+      <div><div class="contact-detail-label">Phone</div><div class="contact-detail-val">(305) 555-0192</div></div>
+    </div>
+    <div class="contact-detail reveal d3">
+      <span class="contact-detail-icon">✉️</span>
+      <div><div class="contact-detail-label">Email</div><div class="contact-detail-val">hello@ivytechops.com</div></div>
+    </div>
+    <div class="contact-detail reveal d4">
+      <span class="contact-detail-icon">🕐</span>
+      <div><div class="contact-detail-label">Hours</div><div class="contact-detail-val">Mon–Sat, 8am – 7pm</div></div>
+    </div>
+  </div>
+
+  <div class="contact-form-card reveal d1">
+    <div class="form-title">Book a Free Diagnosis</div>
+    <form id="contactForm">
+      <div class="form-row">
+        <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" placeholder="Alex" required /></div>
+        <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Johnson" required /></div>
+      </div>
+      <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="alex@email.com" required /></div>
+      <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="(305) 555-0100" /></div>
+      <div class="form-group">
+        <label for="issue">What's going on?</label>
+        <select id="issue">
+          <option value="">Select the main issue...</option>
+          <option>My computer is really slow</option>
+          <option>I think I have a virus</option>
+          <option>It keeps crashing or freezing</option>
+          <option>I need a hardware upgrade</option>
+          <option>Wi-Fi or network problems</option>
+          <option>Small business support</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="form-group"><label for="detail">Tell us more (optional)</label><textarea id="detail" placeholder="Any extra details — what computer, how long it's been happening, etc."></textarea></div>
+      <button type="submit" class="btn-submit">Send — It's Free →</button>
+      <div class="form-success" id="formSuccess">✓ Got it! We'll be in touch within a few hours.</div>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#hero" class="footer-logo">I<em>V</em>y TechOps</a>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <p>© 2025 IVy TechOps · Miami, FL</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    setTimeout(() => {
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.style.display = 'none';
+    }, 900);
+  });
+</script>
+</body>
 </html>
-
-
