@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title="Discuss Your Project | IVy TechOps" description="Tell Iskandar Verdiyev about a workflow, AI agent team, or integration you want to build. Remote and Broward County, Florida.">
+  <section class="container contact-page section"><p class="eyebrow">A CONVERSATION IS A GOOD START</p><h1>What would you like<br />to make <em>easier?</em></h1><p class="contact-page-intro">Tell me what your team is trying to do, which tools are involved, and where the process gets stuck. If you have a timeline or constraints, include those too.</p><Button href={`mailto:${site.email}?subject=Let%E2%80%99s%20discuss%20a%20project`}>Email Iskandar</Button><a class="contact-email" href={`mailto:${site.email}`}>{site.email}</a><div class="contact-guidance"><h2>A few details help</h2><ol><li>What does the process look like today?</li><li>Which tools and people are involved?</li><li>What would a useful first improvement look like?</li></ol><p>Please avoid confidential data or credentials in your first message.</p></div><div class="contact-page-links"><span>{site.location}</span><a class="text-link" href={site.github}>GitHub <Icon name="arrow-up" size={16} /></a></div></section>
+</BaseLayout>

@@ -1,0 +1,34 @@
+:root {
+  --paper: #f8f9f4;
+  --white: #fff;
+  --ink: #20291f;
+  --muted: #626a60;
+  --blue: #2949df;
+  --blue-hover: #203bc0;
+  --blue-tint: #edf0ff;
+  --line: #dce1d6;
+  --line-strong: #a8b3a1;
+  --dark: #20291f;
+  --dark-muted: #c2cbbd;
+  --yellow: #e9f0b5;
+  --font-body: 'Manrope', Arial, sans-serif;
+  --font-accent: var(--font-body);
+  --font-accent-weight: 700;
+  --text-sm: .8125rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --radius-sm: .375rem;
+  --radius-md: .75rem;
+  --radius-lg: 1.25rem;
+  --content-width: 1200px;
+}

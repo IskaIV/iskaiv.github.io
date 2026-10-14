@@ -1,0 +1,6 @@
+---
+import Icon, { type IconName } from './Icon.astro';
+interface Props { number: string; icon: IconName; title: string; description: string; example: string; }
+const { number, icon, title, description, example } = Astro.props;
+---
+<article class="service-panel"><div class="service-panel__top"><span class="service-icon"><Icon name={icon} size={27} /></span><span class="index-label">{number}</span></div><h3>{title}</h3><p>{description}</p><div class="service-example"><span>STARTING POINT</span><p>{example}</p></div></article>

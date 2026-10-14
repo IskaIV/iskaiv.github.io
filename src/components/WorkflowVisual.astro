@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+---
+<figure class="workflow-visual" aria-labelledby="workflow-caption">
+  <div class="workflow-topline"><span><span class="tiny-square" aria-hidden="true"></span> A CONNECTED WORKFLOW</span><span>01 — 05</span></div>
+  <div class="workflow-canvas">
+    <svg class="workflow-lines" viewBox="0 0 480 380" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="var(--line-strong)" stroke-width="1.4"><path d="M240 67v29h-118v22M240 96h118v22M122 190v28h118v25M358 190v28H240M240 306v27" /><path class="flow-accent" d="M240 67v29h118v22" /></g><g fill="var(--blue)"><circle cx="240" cy="96" r="3"/><circle cx="240" cy="218" r="3"/></g></svg>
+    <div class="workflow-node workflow-input"><span class="node-icon"><Icon name="mail" /></span><span><small>01 / THE TRIGGER</small><strong>A new inquiry arrives</strong></span></div>
+    <div class="workflow-node workflow-research"><span class="node-icon"><Icon name="search" /></span><small>02 / RESEARCH</small><strong>Find the context</strong><span class="node-note">Approved information</span></div>
+    <div class="workflow-node workflow-draft"><span class="node-icon"><Icon name="file" /></span><small>03 / PREPARE</small><strong>Draft a response</strong><span class="node-note">A useful starting point</span></div>
+    <div class="workflow-node workflow-review"><span class="node-icon"><Icon name="check" /></span><span><small>04 / HUMAN REVIEW</small><strong>Your team has the final say</strong></span></div>
+    <div class="workflow-result"><span aria-hidden="true">↳</span> 05 / A CLEAR NEXT STEP</div>
+    <span class="workflow-annotation">Built around<br /><em>your way of working.</em></span>
+  </div>
+  <figcaption id="workflow-caption"><span>Example workflow</span><span>Illustrative, not a live system</span></figcaption>
+</figure>

@@ -1,0 +1,7 @@
+---
+import Icon from './Icon.astro';
+import { projectSummaries } from '../data/site';
+interface Props { project: (typeof projectSummaries)[number]; }
+const { project } = Astro.props;
+---
+<article class="project-summary"><div class="project-visual" aria-hidden="true"><span class="project-visual__label">WORKFLOW / {project.number}</span><Icon name={project.icon} size={36} /><div class="project-stages">{project.stages.map((stage, i) => <><span>{stage}</span>{i < project.stages.length - 1 && <Icon name="arrow" size={15} />}</>)}</div></div><div class="project-copy"><p class="eyebrow">{project.category}</p><h3>{project.title}</h3><p>{project.summary}</p></div></article>

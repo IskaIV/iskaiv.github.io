@@ -1,0 +1,16 @@
+---
+import Brand from './Brand.astro';
+import Button from './Button.astro';
+import { navigation } from '../data/site';
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <Brand />
+    <nav class="desktop-nav" aria-label="Main navigation">{navigation.map(({ label, href }) => <a href={href}>{label}</a>)}</nav>
+    <Button href="/contact/" class="header-cta">Discuss your project</Button>
+    <details class="mobile-menu">
+      <summary>Menu <span aria-hidden="true">+</span></summary>
+      <nav aria-label="Mobile navigation">{navigation.map(({ label, href }) => <a href={href}>{label}</a>)}<a href="/contact/">Discuss your project <span aria-hidden="true">↗</span></a></nav>
+    </details>
+  </div>
+</header>

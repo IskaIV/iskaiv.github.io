@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import WorkflowVisual from '../components/WorkflowVisual.astro';
+import ServicePanel from '../components/ServicePanel.astro';
+import ProjectSummary from '../components/ProjectSummary.astro';
+import Faq from '../components/Faq.astro';
+import { projectSummaries, site } from '../data/site';
+const process = [
+  { number: '01', title: 'Understand the work.', copy: 'Map the process, the tools, and where things get stuck. Start with the people doing the work.' },
+  { number: '02', title: 'Define a useful first build.', copy: 'Agree on one focused workflow, its boundaries, review points, and what a working result looks like.' },
+  { number: '03', title: 'Build. Test. Refine.', copy: 'Try representative inputs with your team. Learn from the exceptions before putting it into everyday use.' },
+  { number: '04', title: 'Make it yours.', copy: 'Document the setup, ownership, and support needs. Continue with further engineering where it makes sense.' },
+];
+---
+<BaseLayout>
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow hero-eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> AI ENGINEERING. HUMAN CONTEXT.</p>
+      <h1 id="hero-title">Less busywork.<br /><em>More momentum.</em></h1>
+      <p class="hero-intro">AI agents and automation for the work<br class="desktop-break" /> behind your business.</p>
+      <p class="hero-description">I’m Iskandar. I connect the tools, information, and everyday tasks that keep your business moving — so your team can focus on what comes next.</p>
+      <div class="hero-actions"><Button href="/contact/">Discuss your project</Button><a class="text-link" href="#services">Explore services <Icon name="arrow" size={17} /></a></div>
+      <div class="hero-person"><span class="person-monogram" aria-hidden="true">IV</span><div><strong>{site.name}</strong><span>{site.role}</span></div></div>
+    </div>
+    <WorkflowVisual />
+  </section>
+
+  <div class="context-strip"><div class="container"><p>Built for <strong>small businesses & startups.</strong></p><div><span>YOUR EXISTING TOOLS</span><span class="strip-cross" aria-hidden="true">+</span><span>PRACTICAL AUTOMATION</span><span class="strip-cross" aria-hidden="true">+</span><span>HUMAN JUDGMENT</span></div></div></div>
+
+  <section class="section container problem-section" aria-labelledby="problem-title">
+    <div><p class="eyebrow">THE WORK BETWEEN THE WORK</p><h2 id="problem-title">Good people.<br />Disconnected processes.</h2></div>
+    <div class="problem-copy"><p>Another copy-and-paste. Another lost handoff. Another answer buried in a document.</p><p>When your tools don’t talk to each other, your team fills the gaps. I help connect those steps and give repeatable work a clearer path.</p><a class="text-link" href="#services">Let’s find a better flow <Icon name="arrow" size={17} /></a></div>
+  </section>
+
+  <section id="services" class="section services-section" aria-labelledby="services-title">
+    <div class="container"><div class="section-heading-row"><SectionHeading eyebrow="01 / HOW I CAN HELP" id="services-title">A practical starting point.<br /><em>A more connected business.</em></SectionHeading><p class="section-aside">One engineer. Three ways to move<br class="desktop-break" /> the work forward.</p></div>
+      <div class="service-grid">
+        <ServicePanel number="01" icon="network" title="AI agent teams" description="Give a defined task a team of software assistants that can research, prepare, and review using approved information and tools." example="Research and draft outreach with a review step." />
+        <ServicePanel number="02" icon="bolt" title="Workflow automation" description="Connect routine steps across your systems. Move information, trigger the next action, and surface exceptions for a person to handle." example="Route an inquiry and prepare the next handoff." />
+        <ServicePanel number="03" icon="code" title="Engineering alongside your team" description="Work with the people using the software. Turn a business problem or promising prototype into a focused build, with feedback along the way." example="Connect a prototype to the systems your team uses." />
+      </div><p class="services-note">The hands-on collaboration is also called <strong>forward deployed engineering.</strong> The examples above are possible starting points; scope depends on your tools and needs.</p>
+    </div>
+  </section>
+
+  <section id="work" class="section container work-section" aria-labelledby="work-title">
+    <div class="section-heading-row"><SectionHeading eyebrow="02 / A LOOK AT THE WORK" id="work-title">Different tasks.<br /><em>The same connected thinking.</em></SectionHeading><p class="section-aside">Three builds spanning outreach,<br class="desktop-break" /> analysis, and everyday admin.</p></div>
+    <div class="project-grid">{projectSummaries.map((project) => <ProjectSummary project={project} />)}</div>
+    <p class="editorial-note"><Icon name="file" size={16} /><span>Project summaries based on my supplied descriptions. Diagrams are illustrative; full case studies and outcomes are still being documented.</span></p>
+  </section>
+
+  <section id="approach" class="approach-section section" aria-labelledby="approach-title"><div class="container"><div class="approach-intro"><div><p class="eyebrow">03 / THE WAY I WORK</p><h2 id="approach-title">Start small.<br /><em>Build something useful.</em></h2></div><p>A focused pilot gives us something concrete to test, learn from, and improve. We define the work together, then build around how your business actually runs.</p></div><ol class="process-grid">{process.map((step) => <li><span class="process-number">{step.number}</span><h3>{step.title}</h3><p>{step.copy}</p></li>)}</ol><div class="approach-footnote"><span class="tiny-square" aria-hidden="true"></span> Clear scope. Review where it matters. A handover your team can use.</div></div></section>
+
+  <section id="about" class="section container about-section" aria-labelledby="about-title"><div class="identity-panel"><span class="identity-corner">IVy / THE PERSON BEHIND THE WORK</span><span class="identity-monogram" aria-hidden="true">I<span>V</span></span><div><strong>Iskandar Verdiyev</strong><span>AI Automation Engineer</span></div><span class="identity-location"><span aria-hidden="true">↗</span> Remote + Broward County, FL</span></div><div class="about-copy"><p class="eyebrow">04 / A LITTLE ABOUT ME</p><h2 id="about-title">Technical by trade.<br /><em>Practical by nature.</em></h2><p>I’m Iskandar, the engineer behind IVy TechOps. My background spans IT support and management, technical work for a general contractor, CAD/BIM design, and website development.</p><p>Today I build AI agent teams and workflow automations that fit into existing business systems. I like starting with a real process, understanding what gets in the way, and building something the people using it can own.</p><a class="text-link" href={site.github}>Find me on GitHub <Icon name="arrow-up" size={17} /></a></div></section>
+
+  <section class="section container faq-section" aria-labelledby="faq-title"><div><p class="eyebrow">BEFORE WE GET STARTED</p><h2 id="faq-title">A few good<br /><em>questions.</em></h2><p class="faq-intro">Useful work starts with a clear conversation.</p></div><Faq /></section>
+
+  <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container"><p class="eyebrow">LET’S CONNECT THE DOTS</p><div class="contact-content"><h2 id="contact-title">What would you like<br />to make <em>easier?</em></h2><div><p>Tell me about the process, the tools you use, and where things get stuck. We can start there.</p><Button href="/contact/" variant="light">Discuss your project</Button><span class="contact-location">{site.location}</span></div></div></div></section>
+</BaseLayout>

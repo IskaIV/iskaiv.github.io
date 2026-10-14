@@ -1,8 +1,8 @@
 # Personal-brand website rebuild plan
 
-Prepared and updated: October 14, 2026. Status: planning draft updated with the owner's discovery answers; implementation and deployment remain out of scope.
+Prepared and updated: October 14, 2026. Status: local Astro + TypeScript foundation and homepage draft implemented; production release and deployment remain out of scope. Section 13 records setup commands, design decisions, and verification.
 
-This document plans the complete replacement of the current PC-repair website with a personal-brand website serving small businesses and startups that need AI agents, workflow automation, and forward deployed engineering. Only this planning document is being edited. Implementation, dependency installation, hosting setup, domain changes, and deployment are outside the current task.
+This document plans the replacement of the PC-repair website with a personal-brand website serving small businesses and startups that need AI agents, workflow automation, and forward deployed engineering. The owner subsequently requested the local foundation and a polished homepage draft, including implementation, dependency installation, preview, checks, and a production build. Hosting setup, domain changes, publication, and deployment remain outside this phase. Earlier discovery and future launch proposals are retained as context; the later user request authorizes this local work.
 
 ## 1. Decisions and open choices
 
@@ -13,7 +13,7 @@ This document plans the complete replacement of the current PC-repair website wi
 | Framework | Agreed | Astro + TypeScript. |
 | Repository | Agreed | Keep GitHub as the source of truth, using the existing repository. |
 | Hosting | Agreed | Cloudflare Workers hosting static assets. |
-| Scope now | Agreed | Inspect, research, ask discovery questions, and save a plan; do not implement or deploy. |
+| Scope now | Owner requested | Build the local Astro + TypeScript foundation and homepage draft; show a local preview, run the production build, update this plan; do not deploy. |
 | Evidence | Required | No invented clients, testimonials, credentials, experience, or results. Existing site claims are not verified evidence. |
 | Brand | Owner confirmed | IVy TechOps is the primary brand; Iskandar Verdiyev is the person behind it. |
 | Public title | Owner confirmed | AI Automation Engineer. |
@@ -494,7 +494,7 @@ Use Astro's static output for public pages, with TypeScript and minimal browser 
 
 This is a multi-page marketing site. Use `not_found_handling: "404-page"`; avoid an SPA fallback that returns the home page with a 200 response for unknown paths. Optional backend contact handling is a separate scope decision, not a reason to make every page dynamic.
 
-### Proposed source organization — not created in this task
+### Target source organization — foundation implemented; full launch structure still proposed
 
 ```text
 docs/website-rebuild-plan.md       # this planning document
@@ -563,7 +563,7 @@ No credentials, hosting accounts, domain ownership, registrar state, DNS records
 
 ## 11. Implementation checklist
 
-This checklist is for future work. Completing this planning document does not authorize any implementation or deployment item below. Start the next phase only when the owner requests it.
+The owner has now requested the local foundation and homepage phase. Checked items record completed work within that scope. Remaining content, hosting, and release items belong to later phases; deployment has not been requested.
 
 ### Phase 0 — planning completed in this task
 
@@ -584,39 +584,39 @@ This checklist is for future work. Completing this planning document does not au
 - [x] Replace biography/contact placeholders and choose an email-first contact destination.
 - [ ] Define project-specific scope, prices, durations, and support terms when quoting; no public promises are needed for the initial site.
 - [ ] Gather and clear project evidence; include or omit Projects accordingly.
-- [ ] Audit every claim and exclude existing unverified reviews, prices, and guarantees.
-- [ ] Choose brand assets, palette, typography, and page layouts.
+- [x] Audit homepage claims and exclude existing unverified reviews, prices, and guarantees.
+- [x] Choose an original wordmark/monogram, palette, typography, and responsive homepage layout; see section 13.
 - [ ] Review sitemap and detailed page layouts; temporary workers.dev hosting and email contact are already selected.
 - [ ] Define privacy facts and any required review based on actual data collection.
 
 ### Phase 2 — build foundation after implementation is requested
 
-- [ ] Preserve the existing version and create the implementation branch.
-- [ ] Initialize Astro + TypeScript, strict typing, a supported Node version, and a lockfile.
-- [ ] Add the shared layout, semantic landmarks, navigation, footer, metadata, and design tokens.
-- [ ] Build reusable presentation components and accessible mobile navigation/FAQ.
+- [x] Preserve the existing version and create the implementation branch.
+- [x] Initialize Astro + TypeScript, strict typing, a supported Node version, and a lockfile.
+- [x] Add the shared layout, semantic landmarks, navigation, footer, draft metadata, and design tokens.
+- [x] Build reusable presentation components and accessible native mobile navigation/FAQ.
 - [ ] Add validated project content and exclude drafts from routes and sitemap.
 - [ ] Set up static output and local Workers asset configuration, including a real 404.
-- [ ] Add accurate development/content instructions to README.
+- [x] Add accurate development/content instructions to README.
 
 ### Phase 3 — implement content and inquiry path
 
 - [ ] Build all confirmed public routes and approved project stories.
 - [ ] Add cleared imagery, alt text, favicon, and original sharing assets.
-- [ ] Add the ivy.techops@gmail.com email CTA and GitHub IskaIV link; check both destinations.
+- [x] Add the ivy.techops@gmail.com email CTA and GitHub IskaIV link; verify href destinations without sending a message.
 - [ ] If a real form is separately selected later, implement its backend and actual submission success/error states.
 - [ ] Add the factual privacy notice and chosen measurement setup.
 - [ ] Add canonical URLs, sitemap, robots behavior, and evidence-supported structured data.
 
 ### Phase 4 — verify before release
 
-- [ ] Run locked install, `astro check`, and production build successfully.
-- [ ] Check internal links, route coverage, draft exclusion, and unknown-path HTTP 404.
+- [x] Run locked install, `astro check`, and production build successfully for the local draft.
+- [x] Check all built-route internal links, draft indexing rules, and local unknown-path HTTP 404; full launch route coverage and Workers behavior remain deferred.
 - [ ] Verify core content/navigation with JavaScript disabled and reduced motion enabled.
 - [ ] Review keyboard behavior, headings, focus, contrast, form labels/errors, and mobile layouts.
 - [ ] Measure representative page performance and inspect optimized assets.
 - [ ] If a form exists, verify inbox receipt plus validation, provider failure, and abuse-handling behavior with controlled test data.
-- [ ] Search production content for placeholders, obsolete PC-repair branding, and unsupported claims.
+- [x] Search production content for placeholders and obsolete PC-repair branding; review draft claims against the owner-supplied record.
 - [ ] Review final identity, project permissions, privacy facts, and working contact destinations.
 
 ### Phase 5 — release only after deployment is requested
@@ -645,4 +645,71 @@ Recorded decisions: IVy TechOps, Iskandar Verdiyev, AI Automation Engineer, supp
 
 Remaining content work: complete each project's actual tools, type/date/status, role/collaborators, publication limits, and cleared visual evidence. Add measured outcomes only if available. Choose final page designs and set the actual Worker hostname during later setup. Other contact links and a custom domain are deferred, not launch blockers. Commercial terms remain scope-specific.
 
-The site has not been implemented or deployed. Only this planning document has changed. Further project details can be incorporated as supplied; any build or release remains a separate requested phase.
+The local foundation and homepage draft have now been implemented at the owner's request. Nothing has been pushed, published, or deployed. Full launch content and release remain later phases.
+
+## 13. Local implementation record — October 14, 2026
+
+### Scope and preservation
+
+The requested foundation and homepage draft replace the root HTML/CSS/JS implementation with Astro static pages. The previous version is preserved in Git: tag `archive/pre-astro-2026-10-14` points to commit `f3b1f49f2733fd4a8711ac9f9b1c7e4fe2f5198a`. Work is on `codex/website-rebuild`; `main` is unchanged. Inspect with `git show archive/pre-astro-2026-10-14:index.html`, or create a separate inspection checkout with `git worktree add ../ivy-legacy archive/pre-astro-2026-10-14`. No remote state or hosting settings were changed.
+
+No `AGENTS.md` was found in the repository or its parent directories. This plan supplied the identity, content, architecture, and evidence rules. The later user request authorizes local implementation; its instruction not to deploy remains controlling.
+
+### Setup and commands
+
+Tested runtime: Node `24.16.0`, npm `11.13.0`. `.node-version` records the tested version; the package engine requires Node `22.12.0+`. Stable versions were checked in the npm registry: Astro `7.3.8`, `@astrojs/check` `0.9.10`, TypeScript `6.0.3` (compatible with the checker; TypeScript 7 is outside its declared peer range). Exact versions and `package-lock.json` make installation reproducible. Astro is the only direct runtime dependency; the checker and TypeScript are development dependencies.
+
+```sh
+npm ci
+npm run dev                    # local development, normally port 4321
+npm run check                  # Astro + TypeScript diagnostics
+npm run build                  # static production output in dist/
+npm run verify                 # generated HTML/link/draft smoke checks
+npm run preview                # serve the production build locally
+```
+
+Both servers bind to `127.0.0.1`. Use `-- --port 4321` or another local port when needed; Ctrl+C stops the server. On this Codex host, network sandboxing required running the preview and loopback HTTP checks with network permission. This is local access, not deployment or an application dependency.
+
+### Design decisions
+
+The references were revisited as live pages and screenshots. [Bonsai](https://www.hellobonsai.com/) informed the generous light canvas and approachable business language. [CoLab](https://www.colabsoftware.com/) informed the workflow explanation and contrasting dark engineering section. Composition, copy, monogram, icons, and diagrams are original; no reference-site assets or claims are reused.
+
+| Element | Implemented decision and purpose |
+| --- | --- |
+| Brand | IVy TechOps wordmark and original IV monogram. Iskandar's name/title appear in the hero and a typographic personal introduction. No stock portrait or invented team. |
+| Headline | “Less busywork. More momentum.” Supported immediately by AI agents/automation, identity, and audience. Directional positioning, not a numerical promise. |
+| Typography | Self-hosted Manrope Latin variable 400–800 throughout. At the owner's request, the thin Instrument Serif accent was replaced everywhere with upright Manrope 700: emphasized headings, monograms, process numbers, and the workflow annotation. The old font asset/license were removed. WOFF2 and its SIL Open Font License remain in `public/fonts/`; no external font requests at runtime. |
+| Palette | Warm paper `#f8f9f4`, ink `#20291f`, blue `#2949df`, muted text `#626a60`, pale surfaces, restrained yellow in the dark process section. |
+| Rhythm | Shared 4px-based spacing scale, 1200px content width, fluid headings, generous section spacing, thin borders, small-radius buttons, varied editorial compositions. |
+| Workflow visual | Original request → research/context → draft → human review → next step diagram, explicitly labeled “Example workflow” and “Illustrative, not a live system.” No fake activity, clients, or live status. |
+| Projects | Three owner-supplied generic summaries with original flow illustrations. Full case-study routes withheld; the visible note distinguishes diagrams from cleared artifacts and measured outcomes. |
+| Process | Dark four-stage section explains understand → define → build/test → hand over. Proposed practices remain engagement choices, not invented history. |
+| Motion | Brief entrance and modest hover effects. No scroll reveal, autoplay, continuous animation, or motion library. Reduced-motion CSS disables animations, transitions, smooth scrolling, and hover movement. |
+| Mobile | Single-column reading order, readable workflow nodes, stacked sections, native `details` navigation. No hidden essential content or hover-only controls. |
+| Contact | Consistent “Discuss your project” links lead to `/contact/`, which opens the confirmed email address. No simulated submission, booking promise, phone, or form backend. |
+
+### Reusable foundation and routes
+
+`BaseLayout.astro` owns the head, description/social metadata, skip link, main landmark, navigation, and footer. Components cover Brand, Button, Icon, SiteHeader, SiteFooter, SectionHeading, WorkflowVisual, ServicePanel, ProjectSummary, and Faq. `src/data/site.ts` centralizes public identity, navigation, summaries, and FAQ content. `src/styles/tokens.css` centralizes design primitives. Plain CSS and SVG avoid a client framework, icon package, styling framework, or animation dependency.
+
+Built routes: `/`, `/contact/`, `/404.html`. Navigation uses actual homepage anchors. Service details, standalone About, approved case studies/content collections, privacy based on actual future collection, sitemap, and raster share image remain deferred. No empty project templates are exposed. The draft emits `noindex, nofollow` and crawler-disallowing robots rules; no canonical hostname is emitted while `SITE_URL` is unset. Hosting config, adapters, credentials, deployment CI, and remote pushes were not added.
+
+### Verification record
+
+Initial `astro check` and production build passed; an unused-import hint was corrected by using the shared SectionHeading component. Final results are recorded after local review. These checks do not establish field performance, actual email delivery, project results, or Cloudflare routing.
+
+- Browser review: desktop homepage/full-page composition, mobile homepage and contact page.
+- Responsive inspection: 320px, 390px, 768px, 1024px, and desktop; no horizontal overflow observed.
+- Keyboard interaction: mobile menu and native FAQ open/close with Enter; focus is visible.
+- Main contrast pairs: ink/paper 14.19:1, muted/paper 5.29:1, white/blue 6.75:1, dark-section muted/ink 8.99:1. Yellow focus outlines on blue measure 5.65:1. This checks selected color pairs, not a complete accessibility certification.
+- Reduced motion: source rules reviewed. Available browser controls lack media emulation, so reduced-motion runtime emulation was not performed.
+- Core production content has no client scripts; content, navigation, and native disclosures do not depend on JavaScript.
+- `npm ci`: successful clean locked install; 265 installed packages (including transitive dependencies), no reported vulnerabilities.
+- `npm run check`: 18 files, zero errors/warnings/hints.
+- `npm run build`: three static pages; `npm run verify`: all 63 internal links/fragments resolve, one h1/main/description per page, draft indexing retained, no scripts or obsolete claims.
+- Production preview: Home and Contact return 200; an unknown route returns HTTP 404 with the custom content. Favicon, both fonts, and robots rules return 200. Cloudflare behavior remains untested because no deployment was requested.
+- Final production browser inspection confirms zero script elements, no horizontal overflow, no canonical hostname, and draft robots metadata. The local preview is at `http://127.0.0.1:4321/`; captured desktop/mobile views are saved under ignored `artifacts/` for this review session.
+
+### Remaining launch work
+
+Later release work still needs project publication records and cleared artifacts, additional confirmed routes, actual hosting/privacy decisions, canonical hostname/sitemap, social image, representative performance checks, Workers 404 verification, and a separate request to deploy. The unchanged GitHub-hosted site and any old-host migration remain separate from this local phase.
